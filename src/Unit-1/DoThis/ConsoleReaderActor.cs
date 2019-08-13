@@ -12,11 +12,9 @@ namespace WinTail
         public const string StartCommand = "start";
         public const string ExitCommand = "exit";
 
-        private IActorRef _validationActor;
-
-        public ConsoleReaderActor(IActorRef validationActor)
+        public ConsoleReaderActor()
         {
-            _validationActor = validationActor;
+            
         }
 
         protected override void OnReceive(object message)
@@ -31,9 +29,7 @@ namespace WinTail
         #region Internal Methods
         private void DoPrintInstructions()
         {
-            Console.WriteLine("Write whatever you want into the console!");
-            Console.WriteLine("Some entries will pass validation, and some won't...\n\n");
-            Console.WriteLine("type 'exit' to quit this application at any time. \n");
+            Console.WriteLine("Please provide the URI of a log file on disk.\n");
         }
 
         private void GetAndValidateInput()
@@ -45,7 +41,7 @@ namespace WinTail
                 return;
             }
 
-            _validationActor.Tell(message);
+            Context.ActorSelection("akka://MyActorSystem/user/validationActor").Tell(message);
         }
 
         private static bool IsValid(string message)
