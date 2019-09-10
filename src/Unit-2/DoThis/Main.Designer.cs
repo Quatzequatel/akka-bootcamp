@@ -28,52 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.sysChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.AddSeriesButton = new System.Windows.Forms.Button();
+            this.BtnCpu = new System.Windows.Forms.Button();
+            this.BtnMemory = new System.Windows.Forms.Button();
+            this.BtnDisk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
             // sysChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.sysChart.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.sysChart.ChartAreas.Add(chartArea1);
             this.sysChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.sysChart.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.sysChart.Legends.Add(legend1);
             this.sysChart.Location = new System.Drawing.Point(0, 0);
-            this.sysChart.Margin = new System.Windows.Forms.Padding(6);
+            this.sysChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sysChart.Name = "sysChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.sysChart.Series.Add(series2);
-            this.sysChart.Size = new System.Drawing.Size(1368, 858);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.sysChart.Series.Add(series1);
+            this.sysChart.Size = new System.Drawing.Size(1026, 686);
             this.sysChart.TabIndex = 0;
             this.sysChart.Text = "sysChart";
             // 
-            // AddSeriesButton
+            // BtnCpu
             // 
-            this.AddSeriesButton.AutoSize = true;
-            this.AddSeriesButton.Location = new System.Drawing.Point(1175, 755);
-            this.AddSeriesButton.Name = "AddSeriesButton";
-            this.AddSeriesButton.Size = new System.Drawing.Size(127, 41);
-            this.AddSeriesButton.TabIndex = 1;
-            this.AddSeriesButton.Text = "Add Series";
-            this.AddSeriesButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.AddSeriesButton.UseVisualStyleBackColor = true;
-            this.AddSeriesButton.Click += new System.EventHandler(this.AddSeries_Click);
+            this.BtnCpu.AutoSize = true;
+            this.BtnCpu.Location = new System.Drawing.Point(869, 454);
+            this.BtnCpu.Name = "BtnCpu";
+            this.BtnCpu.Size = new System.Drawing.Size(101, 47);
+            this.BtnCpu.TabIndex = 1;
+            this.BtnCpu.Text = "CPU (ON)";
+            this.BtnCpu.UseVisualStyleBackColor = true;
+            this.BtnCpu.Click += new System.EventHandler(this.BtnCpu_Click);
+            // 
+            // BtnMemory
+            // 
+            this.BtnMemory.AutoSize = true;
+            this.BtnMemory.Location = new System.Drawing.Point(869, 515);
+            this.BtnMemory.Name = "BtnMemory";
+            this.BtnMemory.Size = new System.Drawing.Size(137, 47);
+            this.BtnMemory.TabIndex = 2;
+            this.BtnMemory.Text = "MEMORY (OFF)";
+            this.BtnMemory.UseVisualStyleBackColor = true;
+            this.BtnMemory.Click += new System.EventHandler(this.BtnMemory_Click);
+            // 
+            // BtnDisk
+            // 
+            this.BtnDisk.AutoSize = true;
+            this.BtnDisk.Location = new System.Drawing.Point(869, 577);
+            this.BtnDisk.Name = "BtnDisk";
+            this.BtnDisk.Size = new System.Drawing.Size(137, 47);
+            this.BtnDisk.TabIndex = 3;
+            this.BtnDisk.Text = "DISK (OFF)";
+            this.BtnDisk.UseVisualStyleBackColor = true;
+            this.BtnDisk.Click += new System.EventHandler(this.BtnDisk_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1368, 858);
-            this.Controls.Add(this.AddSeriesButton);
+            this.ClientSize = new System.Drawing.Size(1026, 686);
+            this.Controls.Add(this.BtnDisk);
+            this.Controls.Add(this.BtnMemory);
+            this.Controls.Add(this.BtnCpu);
             this.Controls.Add(this.sysChart);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.Text = "System Metrics";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
@@ -87,7 +112,9 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart sysChart;
-        private System.Windows.Forms.Button AddSeriesButton;
+        private System.Windows.Forms.Button BtnCpu;
+        private System.Windows.Forms.Button BtnMemory;
+        private System.Windows.Forms.Button BtnDisk;
     }
 }
 
