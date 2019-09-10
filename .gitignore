@@ -186,3 +186,7 @@ FakesAssemblies/
 /src/Unit-1/DoThis/.vs/WinTail/v16/Server/sqlite3/storage.ide-shm
 /src/Unit-1/DoThis/.vs/WinTail/v16/Server/sqlite3/storage.ide-wal
 /src/Unit-1/DoThis/.vs/WinTail/v16/Server/sqlite3/storage.ide
+*.ide
+*.ide-shm
+*.ide-wal
+
