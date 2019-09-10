@@ -174,6 +174,7 @@ UpgradeLog*.htm
 # SQL Server files
 *.mdf
 *.ldf
+*.sqlite
 
 # Business Intelligence projects
 *.rdl.data
@@ -187,3 +188,4 @@ FakesAssemblies/
 /src/Unit-1/DoThis/.vs/WinTail/v16/Server/sqlite3/storage.ide-wal
 /src/Unit-1/DoThis/.vs/WinTail/v16/Server/sqlite3/storage.ide
 /src/Unit-2/DoThis/.vs/SystemCharting/v16/Server/sqlite3/db.lock
+*storage.ide*
